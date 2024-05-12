@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-Projet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/edit-contrast.css' rel='stylesheet'>
+    <style>
+      .navUl li{
+        border-left: 1px solid rgb(146, 145, 145);
+        border-right: 1px solid rgb(146, 145, 145);
+      }
+      footer{
+        background-color: rgb(24, 23, 23);
+        color: aliceblue;
+      }
+      main .row div p{
+        text-transform: capitalize;
+        border-bottom: 2px solid rgb(48, 45, 45);
+      } 
+      main .row div h4{
+        text-transform: uppercase;
+        border-bottom: 2px solid rgb(48, 45, 45);
+      }
+      input{
+        cursor: auto;
+      }
+      img:hover{
+        border: 1px solid red;
+        box-shadow: 2px 0px 400px 45px rgba(10,10,10,1);
+      }
+      .p{
+        position: absolute;
+        color: white;
+        top: 5px;
+        right: 25px;
+        background-color: rgba(233, 61, 61, 0.753);
+        width: fit-content;
+        text-align: center;
+      }
+      .p1 b{
+        background-color: rgb(31, 31, 39);
+        color: white;
+        line-height: 30px;
+        margin: 10px;
+        padding: 5px;
+      }
+      .dark{
+            background-color: #333;
+            color: #b32525;
+        }
+        .ibtn{
+            width: 50p;
+            height: 50px;
+            background-size: contain;
+            cursor: pointer;
+        }
+        .darkbtn{
+          background-color: #346c91;
+        }
+    </style>
+    <script>
+      function myf(){
+            document.body.classList.toggle('dark')
+            document.getElementById("btn").classList.toggle("darkbtn")
+        }
+      function comment(){
+            let a = document.getElementById("textComment").value
+            document.getElementById("zoneComment").innerHTML = a
+            a = null
+        }
+    </script>
+</head>
+<body >    
+                                                      <!--  ferst treau 'header'  -->
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand text-uppercase" href="#" style="text-transform: uppercase;">the home </a>
+              </div>
+              <ul class="nav navbar-nav text-uppercase">
+                    <li class="active"><a href="myIndix2.html">Sing in</a></li>
+                    <li><a href="myindex3.html">blog</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">page4<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">page templates<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">post templates<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li><!-- -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">catgores<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li><!-- -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">tepth<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li><!-- -->
+                    <li><a href="myIndex4.html">Page 4</a></li>
+              </ul>
+              <form class="navbar-form navbar-left" action="/action_page.php" style="display: flex;">
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <style>
+                  .gg-edit-contrast {
+                  box-sizing: border-box;
+                  position: relative;
+                  display: block;
+                  transform: scale(var(--ggs,1));
+                  width: 16px;
+                  height: 16px;
+                  border: 2px solid transparent;
+                  box-shadow: 0 0 0 2px;
+                  border-radius: 100px;
+                  overflow: hidden
+                  }
+
+                  .gg-edit-contrast::before {
+                  content: "";
+                  display: block;
+                  box-sizing: border-box;
+                  position: absolute;
+                  width: 6px;
+                  height: 12px;
+                  background: currentColor
+                  } 
+                </style>
+                <i class="gg-edit-contrast ibtn" onclick="myf()" style="margin: 10px 5px 10px 100px;"></i>
+              </form>
+            </div>
+    </nav>
+    <nav class="navbar navbar-inverse visible-xs">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Age</a></li>
+            <li><a href="#">Gender</a></li>
+            <li><a href="#">Geo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-md-3 sidenav hidden-xs">
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content;">Logo</h2>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+          </div>
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content;">Logo</h2>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+          </div>
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content;">Logo</h2>
+            <p>
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+              Notre organisation et ses 125 partenaires stockent et/ou 
+              accèdent à des informations, telles que les identifiants 
+            </p>
+          </div>
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content;">Tage</h2>
+            <p class="p1">
+              <b>Notre</b> <b>organisation</b> <b>partenaires</b> <b>stockent </b>
+              <b>accèdent</b> <b>à des</b> <b>informations</b> <b>telles que les</b>
+               <b>identifiants</b> <b>Notre</b> <b>organisation </b>
+               <b>et ses 125</b> <b>partenaires</b>
+            </p>
+          </div>
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content; text-transform: capitalize;">Archevs</h2>
+            <input type="text" style="width: 80%; margin: 10px; ">
+          </div>
+          <div style="border-radius: 5px;background-color: white;">
+            <h2 style="background-color: black; color: white; text-align: center; height: fit-content; text-transform: capitalize;">catrgourus</h2>
+            <input type="text" style="width: 80%; margin: 10px; ">
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <img src="Ro.jpg" class="img-thumbnail" alt="">
+                <p class="p">24 <br> Apr <br> 2001</p>
+              </div>
+              <div class="well">
+                <h4 class="h4">Text messaging, or texting, is the act of composing </h4>
+                <p>Un texte est une série orale ou écrite de mots perçus comme
+                   constituant un ensemble cohérent...</p> <!-- model 1-->
+                <div class="container">
+                  <!-- Trigger the modal with a button -->
+                  <i style="text-transform: uppercase; margin: 0;">Jason Robards .<span>0</span></i><br>
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="text-transform: uppercase;">comment</button>
+                
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="zoneComment"></p><br>
+                            <input type="text" style="width: 88%;" id="textComment" >
+                            <i class="btn btn-info btn-lg" onclick="comment()"><span class="glyphicon glyphicon-send" ></span></i> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: brown; color: aliceblue;">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid text-center">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid" style="margin-left: 30%;">
+          <ul class="nav navbar-nav navUl">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1-1</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div class="row" style="display: flex; column-gap: 10px;">
+          <div class="col-md-2">
+            <h4>wwwwwwwww</h4>
+            <p>Lorem ipsum...</p>
+            <p>Lorem ipsum...</p>
+            <p>Lorem ipsum...</p>
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-md-2">
+            <h4>tttttttttt</h4>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+          </div>
+          <div class="col-md-2">
+            <h4>uuuuuuu</h4>
+            <p>Lorem ipsum...</p>
+            <p>Lorem ipsum...</p>
+            <p>Lorem ipsum...</p>
+          </div>
+          <div class="col-md-2">
+            <h4>vvvvvvvvvvvv</h4>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+          </div>
+          <div class="col-md-2">
+            <h4>ddddddddddd</h4>
+            <p>Lorem ipsum...</p>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+
+          </div>
+          <div class="col-md-2">
+            <h4>lllllllllllllll</h4>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+            <p>Sed ut perspiciatis...</p>
+          </div>
+        </div>
+      </main>
+      <article style="display: inline; border-bottom: 5px solid white;">
+        <div style="left: 0px;">
+          <p>ssssssssssssssssssssss</p>
+          <p>Disynby.com</p>
+        </div>
+        <div style="right: 0px;">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          <i class="fa fa-vimeo" aria-hidden="true"></i>
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <i class="fa fa-vk" aria-hidden="true"></i>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+      </article>
+    </footer>    
+</body>
+</html>
